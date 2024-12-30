@@ -1,0 +1,74 @@
+/* Force the navbar link text color to white */
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+/* Optional: To make sure navbar brand is also white */
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #d9534f;
+}
+
+h2 {
+    font-size: 28px;
+    color: #d9534f;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.skills ul,
+.projects ul {
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #5bc0de;
+    margin-top: 20px;
+}
+
+.skills ul li,
+.projects ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #d9534f;
+    text-decoration: none;
+}

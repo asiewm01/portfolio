@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me - My Portfolio{% endblock %}
+
+{% block content %}
+    <h2><u>Contact Me</u></h2>
+
+    <p>I'm always open to new opportunities, collaborations, or even just a friendly conversation about web development, technology, and other related fields. If you have any questions or would like to discuss a project, feel free to reach out to me using the form below or through the contact information provided.</p>
+
+    <!-- Contact Form -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Message Box Section (6 columns) -->
+            <div class="col-md-6">
+                <h3><u>Send a Message</u></h3>
+                <p>Fill out the form below with your name, email, and message, and I’ll get back to you as soon as possible. Please ensure you provide the correct details so I can respond promptly.</p>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info Section (6 columns) -->
+            <div class="col-md-6">
+                <h3><u>Contact Information</u></h3>
+                <p>If you prefer to contact me directly, you can use the following information:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:arthur@sunburst.farm">arthur@sunburst.farm</a>, <a href="mailto:siewmj@gmail.com">siewmj@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+6592702017">+65 9270 2017</a></li>
+                    <li><strong>WhatsApp:</strong> <a href="https://wa.me/6592702017" target="_blank">+65 9270 2017</a></li>
+                </ul>
+                <p>Whether you have a question, a business proposal, or just want to chat, don’t hesitate to reach out. I look forward to hearing from you!</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

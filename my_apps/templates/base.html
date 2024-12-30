@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+
+    <!-- Bootstrap CSS (for responsive layout) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS (if you have any) -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white text-danger py-4 d-flex align-items-center">
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="img-fluid" style="max-width: 150px;">
+        <div class="ms-3">  <!-- Added margin to the left of the text -->
+            <h2 class="lead fw-bold"><b>I'm a passionate web developer</b></h2>
+            <h2 class="lead fw-bold"><b>with experience in building modern web applications.</b></h2>            
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand text-white" href="{% url 'home' %}">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/about_me" style="color: white;">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/resume" style="color: white;">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/portfolio" style="color: white;">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/skills" style="color: white;">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog" style="color: white;">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact_me" style="color: white;">Contact Me</a></li>
+                </ul>
+            </div>
+    </nav>
+    
+
+    <!-- Main Content Section -->
+    <main class="container py-5">
+        {% block content %}
+        <!-- Page-specific content will be inserted here -->
+        {% endblock %}
+    </main>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>
+        <a href="https://www.linkedin.com/in/yourlinkedin" class="text-white" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/yourgithub" class="text-white" target="_blank">GitHub</a>
+    </p>
+    <p>
+        <a href="{% url 'privacy_policy' %}" class="text-white">Privacy Policy</a> | 
+        <a href="{% url 'tech_stack' %}" class="text-white">Tech Stack</a>
+    </p>
+</footer>
+
+    <!-- Bootstrap JS (required for responsiveness and interactivity) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS (if you have any) -->
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

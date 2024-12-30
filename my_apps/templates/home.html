@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <!-- Column for the Image -->
+        <div class="col-md-6">
+            <img src="{% static 'images/home_page_profile.jpg' %}" alt="Arthur Siew" class="img-fluid">
+        </div>
+        
+        <!-- Column for the Text -->
+        <div class="col-md-6">
+            <h2><u>Hi, I am Arthur Siew</u></h2>
+            <p>I am a passionate junior web developer with a strong foundation in both front-end and back-end technologies. My journey into web development began with my background in digital marketing, specifically SEO, where I honed my problem-solving and technical skills. I’ve always been fascinated by the potential of technology to solve real-world problems, and this sparked my transition into the world of web development.</p>
+
+            <p>With a solid grounding in HTML, CSS, JavaScript, and Python, I specialize in full-stack development. I have experience working with modern frameworks like React for the front-end and Django for the back-end. I am particularly interested in building scalable and responsive web applications that are not only functional but also user-friendly and visually appealing.</p>
+        </div>
+    </div>
+
+    <!-- New section for the "In addition to my technical skills" part -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <p>In addition to my technical skills, I am deeply motivated by the idea of continuous learning and growth. I believe that technology is an ever-evolving field, and I am committed to staying up to date with the latest trends and innovations. Currently, I am furthering my education at Lithan Academy, where I am working towards a Specialist Diploma in Software Engineering. I am also exploring emerging technologies like Web3, Blockchain, and Cloud Computing, which I believe will shape the future of the digital landscape.</p>
+
+            <p>As I continue to expand my skill set, my ultimate goal is to leverage my expertise in web development, blockchain, and cloud technologies to build innovative solutions that can have a meaningful impact across industries. I am particularly passionate about how these technologies can contribute to improving sectors like agriculture, sustainability, and healthcare.</p>
+
+            <p>If you'd like to discuss a potential project or learn more about my work, feel free to reach out via <a href="mailto:arthur@sunburst.farm">email</a>, or you can connect with me on <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a> or view my work on <a href="https://github.com/yourgithub" target="_blank">GitHub</a>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Countdown -->
+<script>
+    // Set the date we're counting down to for Web3 and Solidity (June 1, 2025)
+    var countDownDateWeb3 = new Date("Jun 1, 2025 00:00:00").getTime();
+
+    // Set the date we're counting down to for Master's degree (Dec 31, 2025)
+    var countDownDateMasters = new Date("Dec 31, 2025 00:00:00").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+        
+        // Calculate the difference between now and the Web3 countdown date
+        var distanceWeb3 = countDownDateWeb3 - now;
+        
+        // Calculate the difference between now and the Master's countdown date
+        var distanceMasters = countDownDateMasters - now;
+        
+        // Time calculations for Web3 and Solidity
+        var daysWeb3 = Math.floor(distanceWeb3 / (1000 * 60 * 60 * 24));
+        var hoursWeb3 = Math.floor((distanceWeb3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesWeb3 = Math.floor((distanceWeb3 % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsWeb3 = Math.floor((distanceWeb3 % (1000 * 60)) / 1000);
+        
+        // Time calculations for Master's degree
+        var daysMasters = Math.floor(distanceMasters / (1000 * 60 * 60 * 24));
+        var hoursMasters = Math.floor((distanceMasters % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesMasters = Math.floor((distanceMasters % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsMasters = Math.floor((distanceMasters % (1000 * 60)) / 1000);
+
+        // Display the countdown for Web3 and Solidity studies
+        if (distanceWeb3 > 0) {
+            document.getElementById("countdownText").style.display = "none"; // Hide Web3 text until the date arrives
+        } else {
+            document.getElementById("countdownText").style.display = "block"; // Show Web3 text after June 1, 2025
+        }
+        
+        // Display the countdown for Master's studies (only after June 1, 2025)
+        if (distanceMasters > 0 && distanceWeb3 < 0) {
+            document.getElementById("futureText").innerHTML = "Currently, I will continue to study my Master's in Computer Science with Marconi University starting on December 31, 2025 in " + daysMasters + "d " + hoursMasters + "h " + minutesMasters + "m " + secondsMasters + "s.";
+            document.getElementById("futureText").style.display = "block"; // Show Master's countdown
+        } else if (distanceMasters < 0) {
+            document.getElementById("futureText").innerHTML = "I am now studying my Master's in Computer Science with Marconi University.";
+        }
+        
+    }, 1000);
+</script>
+{% endblock %}

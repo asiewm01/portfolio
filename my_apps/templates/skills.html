@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills - My Portfolio{% endblock %}
+
+{% block content %}
+    <h2>Skills</h2>
+    <p>
+        As a web developer with a diverse background, I have built a solid foundation in both front-end and back-end technologies. Over the years, I have worked with a wide array of tools and frameworks to develop dynamic, responsive, and user-friendly web applications. My journey into web development started with an exploration of frontend technologies, where I honed my skills in HTML, CSS, and JavaScript. From there, I delved deeper into back-end development, working with Python, Django, and SQL to build scalable and efficient web applications.
+    </p>
+    <p>
+        Beyond development, I also have hands-on experience with version control and deployment tools such as Git and GitHub, ensuring smooth collaboration on projects. I have worked with cloud platforms, containerization tools like Docker, and deployment services such as Heroku and Netlify, to deliver applications that are robust and easy to maintain.
+    </p>
+    <p>
+        In addition to my technical skills, I am also experienced in Digital Marketing, with a particular focus on SEO, Google Ads, and Social Media Marketing. My knowledge in these areas allows me to build websites that are optimized for search engines and are able to attract and engage audiences. I also leverage tools like Google Analytics to track user behavior and optimize website performance.
+    </p>
+    <p>
+        My goal as a developer is not only to write clean, functional code but also to understand the business context and user needs. I continuously seek opportunities to expand my skill set, explore new technologies, and contribute to impactful projects that align with my interests in agriculture, AI, IoT, and sustainability.
+    </p>
+
+    <!-- Showcase the favicons horizontally with more padding and centered -->
+    <h3>Technologies</h3>
+    <ul style="list-style-type: none; display: flex; gap: 30px; padding: 40px 0; justify-content: center;">
+        <li><img src="{% static 'images/html.jpg' %}" alt="html" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/css.jpg' %}" alt="css" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/js.jpg' %}" alt="js" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/python.jpg' %}" alt="python" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/django.jpg' %}" alt="django" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/mysql.jpg' %}" alt="mysql" class="img-fluid" style="max-width: 70px;"></li>
+        <li><img src="{% static 'images/react.jpg' %}" alt="react" class="img-fluid" style="max-width: 70px;"></li>
+    </ul>
+
+    <h3>Front-End</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Proficiency</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>Expert</td>
+                <td>Skilled in crafting semantic, accessible, and responsive web pages using HTML5.</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Expert</td>
+                <td>Strong knowledge of CSS3 for designing visually appealing and responsive layouts.</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Intermediate</td>
+                <td>Proficient in using JavaScript to create interactive web pages, including knowledge of ES6+ features.</td>
+            </tr>
+            <tr>
+                <td>React.js</td>
+                <td>Intermediate</td>
+                <td>Experienced in building dynamic, user-friendly interfaces using React and state management with hooks and context API.</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Expert</td>
+                <td>Strong knowledge of using Bootstrap for responsive web design and rapid prototyping.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Back-End</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Proficiency</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python</td>
+                <td>Expert</td>
+                <td>Extensive experience with Python for building robust and scalable applications, particularly using Django.</td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>Expert</td>
+                <td>Skilled in building full-stack web applications with Django, including models, views, templates, and authentication.</td>
+            </tr>
+            <tr>
+                <td>Node.js</td>
+                <td>Intermediate</td>
+                <td>Proficient in using Node.js for server-side scripting, building APIs and services.</td>
+            </tr>
+            <tr>
+                <td>SQL (MySQL, PostgreSQL)</td>
+                <td>Intermediate</td>
+                <td>Experienced in writing and optimizing SQL queries for relational databases like MySQL and PostgreSQL.</td>
+            </tr>
+            <tr>
+                <td>Flask</td>
+                <td>Basic</td>
+                <td>Basic knowledge of using Flask for lightweight web applications.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Version Control & Deployment</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Proficiency</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Git</td>
+                <td>Basic</td>
+                <td>Proficient in version control using Git for collaboration and managing code repositories on GitHub.</td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td>Basic</td>
+                <td>Experienced in using GitHub for version control, collaboration, and project management.</td>
+            </tr>
+            <tr>
+                <td>Heroku</td>
+                <td>Basic</td>
+                <td>Basic experience with deploying applications to Heroku.</td>
+            </tr>
+            <tr>
+                <td>Netlify</td>
+                <td>Basic</td>
+                <td>Basic knowledge of deploying static websites and applications to Netlify.</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
